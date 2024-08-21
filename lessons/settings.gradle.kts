@@ -1,8 +1,9 @@
-rootProject.name = "otus-marketplace"
+rootProject.name = "lessons"
 
 pluginManagement {
+    val kotlinVersion: String by settings
+
     plugins {
-        val kotlinVersion: String by settings
         kotlin("jvm") version kotlinVersion
     }
 }
@@ -11,5 +12,6 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
 }
 
-includeBuild("lessons")
-includeBuild("mentor-platform")
+include("m1l1-first")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
